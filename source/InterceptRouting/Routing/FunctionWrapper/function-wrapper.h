@@ -1,9 +1,9 @@
 #ifndef FUNCTION_WRAPPER_H
 #define FUNCTION_WRAPPER_H
 
-#include "dobby_internal.h"
+#include "dobby/dobby_internal.h"
 
-#include "TrampolineBridge/ClosureTrampolineBridge/AssemblyClosureTrampoline.h"
+#include "TrampolineBridge/ClosureTrampolineBridge/ClosureTrampoline.h"
 #include "InterceptRouting/InterceptRouting.h"
 #include "Interceptor.h"
 
@@ -19,7 +19,7 @@
 
 class FunctionWrapperRouting : public InterceptRouting {
 public:
-  FunctionWrapperRouting(HookEntry *entry) : InterceptRouting(entry) {
+  FunctionWrapperRouting(InterceptEntry *entry) : InterceptRouting(entry) {
   }
 
   void DispatchRouting();
